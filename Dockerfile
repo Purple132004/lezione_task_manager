@@ -20,7 +20,7 @@ ENV COMPOSER_ALLOW_SUPERUSER 1
 CMD ["/start.sh"]
 
 # imposta permessi di lettura ,scrittura ed esecuzione
-RUN chomd -R 775 storage bootstrap/cache
+RUN chmod -R 775 storage bootstrap/cache
 
 # Cambia il proprietario delle directory
 RUN chown -R www-data:www-data storage bootstrap/cache
